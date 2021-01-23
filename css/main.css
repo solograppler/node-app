@@ -1,0 +1,217 @@
+/* 
+font-family: 'Oswald', sans-serif;
+font-family: 'Ubuntu', sans-serif; 
+*/
+
+:root {
+  --columbia-blue: #cee5f2ff;
+  --lapis-lazuli: #336699ff;
+  --raisin-black: #231b1bff;
+  --sizzling-red: #eb5160ff;
+  --citrine: #e0ca3cff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: yellow;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+#projects {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--lapis-lazuli);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  font-family: "Oswald", "sans-serif";
+  background: var(--citrine);
+}
+
+.nav-list li {
+  left: 0;
+  margin: 1.5rem;
+  font-size: 2.5rem;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--raisin-black);
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--raisin-black);
+  justify-content: center;
+  align-items: center;
+  font-size: 7rem;
+}
+
+.welcome-section h1 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.welcome-section p {
+  color: var(--citrine);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 4.5rem;
+}
+
+.welcome-section img {
+  border-radius: 50%;
+  width: 15rem;
+}
+
+.projects-welcome {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid white;
+  color: white;
+  font-size: 7rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects img {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile {
+  background: var(--raisin-black);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: var(--raisin-black);
+  transition: color 0.3s ease-out;
+}
+
+.project-tile:hover .code {
+  color: var(--sizzling-red);
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.btn {
+  font-family: "Ubuntu", sans-serif;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--raisin-black);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--sizzling-red);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30vh;
+  background: var(--columbia-blue);
+  padding: 15% 0 0 0;
+  border-bottom: 10px solid var(--citrine);
+}
+
+.contact-header {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.contact-header h2 {
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.contact-header p {
+  font-size: 2.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
